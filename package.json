@@ -26,14 +26,23 @@
     "node": ">0.6.12"
   },
   "scripts": {
-    "test": "./node_modules/.bin/grunt test"
+    "test": "./node_modules/.bin/grunt test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
-    "eventemitter2" : ">= 0.4.9" ,
-    "lodash": ">= 0.3.2"
+    "eventemitter2": ">= 0.4.9",
+    "lodash": ">= 0.3.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "grunt": "~0.3.14"
   },
-  "keywords": [ "github", "payload", "git hook", "post-receive" ]
+  "keywords": [
+    "github",
+    "payload",
+    "git hook",
+    "post-receive"
+  ],
+  "snyk": true
 }
